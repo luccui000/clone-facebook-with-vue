@@ -1,10 +1,30 @@
-<template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+<template> 
+  <div class="app">
+      <my-nav-bar></my-nav-bar>
+      <main class="main-content">
+        <my-sidebar-left></my-sidebar-left>
+        <my-main-content></my-main-content>
+        <my-sidebar-right></my-sidebar-right>
+      </main>
   </div>
-  <router-view/>
 </template>
+
+<script>
+import Navbar from './components/Navbar.vue'
+import SidebarLeft from './components/SidebarLeft.vue'
+import MainContent from './components/MainContent.vue'
+import SidebarRight from './components/SidebarRight.vue'
+
+export default {
+  name: 'Main',
+  components: {
+    MyNavBar: Navbar,
+    MySidebarLeft: SidebarLeft,
+    MyMainContent: MainContent,
+    MySidebarRight: SidebarRight
+  }
+}
+</script>
 
 <style>
 #app {
@@ -13,18 +33,14 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  background-color: var(--bg-color);
+} 
+.grid {
+  width: 1200px;
+  max-width: 100%;
+  margin: 0 auto;
 }
-
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
+.main-content {
+  display: flex;
+} 
 </style>
