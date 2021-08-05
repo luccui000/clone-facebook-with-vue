@@ -1,5 +1,5 @@
 <template>
-    <div class="content">
+    <div class="content-item main-content">
         
     </div>
 </template>
@@ -12,8 +12,8 @@ export default {
 
 <style scoped>
 
-.content {
-    min-width: 250px;
-    flex: 1;
+.main-content {
+    height: 2000px;
+    flex: 5;
 }
 </style>

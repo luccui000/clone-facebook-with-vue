@@ -1,5 +1,5 @@
 <template>
-    <div class="sidebar"> 
+    <div class="content-item sidebar-right"> 
         <my-friend-request></my-friend-request>
         <my-friend-contact></my-friend-contact>
     </div>
@@ -20,11 +20,14 @@ export default {
 </script>
 
 <style scoped>
-.sidebar {
-    width: 290px;
-    display: flex;
-    flex-direction: column;
+.sidebar-right { 
+    margin-top: 60px;
+    width: 290px; 
     background-color: #18191a;
-    height: calc(100vh - 60px);
+    height: calc(100vh - 60px);  
+    flex: 1;
+    position: fixed;
+    top: 0;
+    right: 0;
 }
 </style>

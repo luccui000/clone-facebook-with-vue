@@ -1,5 +1,5 @@
 <template>
-    <div class="sidebar">
+    <div class="content-item sidebar-left">
         <my-quick-panel></my-quick-panel>
         <my-group-short-cut></my-group-short-cut>
     </div>
@@ -19,13 +19,14 @@ export default {
 </script>
 
 <style scoped>
-.sidebar {
+.sidebar-left {
     width: 290px;
     display: flex;
+    flex: 1;
     flex-direction: column;
     background-color: #18191a;
-    height: calc(100vh - 60px);
-    padding-left: 0;
-    
+    height: calc(100vh - 60px); 
+    position: fixed;
+    margin-top: 60px;
 }
 </style>

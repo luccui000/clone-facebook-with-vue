@@ -35,6 +35,8 @@ export default {
     height: 60px;
     display: flex;
     border-bottom: 1px solid #2f3031;
+    position: fixed;
+    z-index: 10;
 }
 .navbar .left {
     display: flex; 

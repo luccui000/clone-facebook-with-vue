@@ -1,7 +1,7 @@
 <template> 
   <div class="app">
       <my-nav-bar></my-nav-bar>
-      <main class="main-content">
+      <main class="content">
         <my-sidebar-left></my-sidebar-left>
         <my-main-content></my-main-content>
         <my-sidebar-right></my-sidebar-right>
@@ -40,7 +40,10 @@ export default {
   max-width: 100%;
   margin: 0 auto;
 }
-.main-content {
+.content {
   display: flex;
 } 
+.content-item {
+  flex: 1;
+}
 </style>
