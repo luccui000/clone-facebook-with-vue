@@ -4,27 +4,27 @@ export default createStore({
   state: {
       user: {
         name: 'Luc Cui',
-        avatar: 'img/luccui.jpeg'
+        avatar: 'https://scontent-xsp1-2.xx.fbcdn.net/v/t39.30808-1/cp0/p74x74/175668200_1349973478731129_2157869522406749928_n.jpg?_nc_cat=104&ccb=1-3&_nc_sid=7206a8&_nc_ohc=Kp6_SaY6I-cAX-qhGRT&_nc_ht=scontent-xsp1-2.xx&oh=9e0d1b290830f66eae01efb311e0ebe7&oe=610F5647'
       },
       friends: [
         {
           id: 1,
           name: 'Trần Quốc Đảm',
-          avatar: 'img/user.jpg',
+          avatar: 'https://scontent-xsp1-2.xx.fbcdn.net/v/t39.30808-1/cp0/p74x74/175668200_1349973478731129_2157869522406749928_n.jpg?_nc_cat=104&ccb=1-3&_nc_sid=7206a8&_nc_ohc=Kp6_SaY6I-cAX-qhGRT&_nc_ht=scontent-xsp1-2.xx&oh=9e0d1b290830f66eae01efb311e0ebe7&oe=610F5647',
           isActive: true,
           lastActive: Date()
         }, 
         {
           id: 2,
           name: 'Ngọc Chân',
-          avatar: 'img/user.jpg',
+          avatar: 'https://scontent-xsp1-2.xx.fbcdn.net/v/t39.30808-1/cp0/p74x74/175668200_1349973478731129_2157869522406749928_n.jpg?_nc_cat=104&ccb=1-3&_nc_sid=7206a8&_nc_ohc=Kp6_SaY6I-cAX-qhGRT&_nc_ht=scontent-xsp1-2.xx&oh=9e0d1b290830f66eae01efb311e0ebe7&oe=610F5647',
           isActive: true,
           lastActive: Date()
         }, 
         {
           id: 3,
           name: 'Lâm Hữu Nghĩa',
-          avatar: 'img/user.jpg',
+          avatar: 'https://scontent-xsp1-2.xx.fbcdn.net/v/t39.30808-1/cp0/p74x74/175668200_1349973478731129_2157869522406749928_n.jpg?_nc_cat=104&ccb=1-3&_nc_sid=7206a8&_nc_ohc=Kp6_SaY6I-cAX-qhGRT&_nc_ht=scontent-xsp1-2.xx&oh=9e0d1b290830f66eae01efb311e0ebe7&oe=610F5647',
           isActive: true,
           lastActive: Date()
         }, 
@@ -32,7 +32,7 @@ export default createStore({
         {
           id: 4,
           name: 'Tăng Hồng Điệp',
-          avatar: 'img/user.jpg',
+          avatar: 'https://scontent-xsp1-2.xx.fbcdn.net/v/t39.30808-1/cp0/p74x74/175668200_1349973478731129_2157869522406749928_n.jpg?_nc_cat=104&ccb=1-3&_nc_sid=7206a8&_nc_ohc=Kp6_SaY6I-cAX-qhGRT&_nc_ht=scontent-xsp1-2.xx&oh=9e0d1b290830f66eae01efb311e0ebe7&oe=610F5647',
           isActive: true,
           lastActive: Date()
         }, 
@@ -109,6 +109,21 @@ export default createStore({
               }
             ]
           }
+        }, 
+        {
+          type: 'user',
+          post: {
+            id: 1,
+            name: 'Khac Viet',
+            created_at: '20m',
+            content: ``,
+            images: [
+              {
+                id: 1,
+                src: 'https://scontent-xsp1-2.xx.fbcdn.net/v/t39.30808-1/cp0/p74x74/175668200_1349973478731129_2157869522406749928_n.jpg?_nc_cat=104&ccb=1-3&_nc_sid=7206a8&_nc_ohc=Kp6_SaY6I-cAX-qhGRT&_nc_ht=scontent-xsp1-2.xx&oh=9e0d1b290830f66eae01efb311e0ebe7&oe=610F5647'
+              }
+            ]
+          }
         }
       ],
       messagePopups: [
@@ -124,7 +139,9 @@ export default createStore({
     getActiveFriends: state => state.friends.filter(e => e.isActive),
     getAllStories: state => state.stories,
     getAllGroups: state => state.groups, 
-    // getAllPosts: state => state.posts
+    // getAllPosts: state => state.posts,
+    getUser: state => state.user,
+    getUserPosts: state => state.posts.filter(e => e.type === 'user'),
   },
   mutations: {
     

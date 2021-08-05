@@ -16,82 +16,34 @@
         </div>
         <div class="panel-list"> 
             <div class="panel-item">
-                <a href="#">
-                    <img src="https://scontent.fsgn5-7.fna.fbcdn.net/v/t1.6435-1/cp0/p56x56/61750454_301360494135458_489822702073282560_n.jpg?_nc_cat=103&ccb=1-3&_nc_sid=7206a8&_nc_ohc=iDOnhi5K14oAX-BCIyK&_nc_ht=scontent.fsgn5-7.fna&oh=4afae062a43dcc5f651ca39c6d4fd5b3&oe=613163EE" alt="">
-                    <span>Thach Thong</span>
-                    <div class="active"></div>
-                </a>
-            </div> 
-            <div class="panel-item">
-                <a href="#">
-                    <img src="https://scontent.fsgn5-7.fna.fbcdn.net/v/t1.6435-1/cp0/p56x56/61750454_301360494135458_489822702073282560_n.jpg?_nc_cat=103&ccb=1-3&_nc_sid=7206a8&_nc_ohc=iDOnhi5K14oAX-BCIyK&_nc_ht=scontent.fsgn5-7.fna&oh=4afae062a43dcc5f651ca39c6d4fd5b3&oe=613163EE" alt="">
-                    <span>Thach Thong</span>
-                    <div class="active"></div>
-                </a>
-            </div> 
-            <div class="panel-item">
-                <a href="#">
-                    <img src="https://scontent.fsgn5-7.fna.fbcdn.net/v/t1.6435-1/cp0/p56x56/61750454_301360494135458_489822702073282560_n.jpg?_nc_cat=103&ccb=1-3&_nc_sid=7206a8&_nc_ohc=iDOnhi5K14oAX-BCIyK&_nc_ht=scontent.fsgn5-7.fna&oh=4afae062a43dcc5f651ca39c6d4fd5b3&oe=613163EE" alt="">
-                    <span>Thach Thong</span>
-                    <div class="active"></div>
-                </a>
-            </div> 
-            <div class="panel-item">
-                <a href="#">
-                    <img src="https://scontent.fsgn5-7.fna.fbcdn.net/v/t1.6435-1/cp0/p56x56/61750454_301360494135458_489822702073282560_n.jpg?_nc_cat=103&ccb=1-3&_nc_sid=7206a8&_nc_ohc=iDOnhi5K14oAX-BCIyK&_nc_ht=scontent.fsgn5-7.fna&oh=4afae062a43dcc5f651ca39c6d4fd5b3&oe=613163EE" alt="">
-                    <span>Thach Thong</span>
-                    <div class="active"></div>
-                </a>
-            </div> 
-            <div class="panel-item">
-                <a href="#">
-                    <img src="https://scontent.fsgn5-7.fna.fbcdn.net/v/t1.6435-1/cp0/p56x56/61750454_301360494135458_489822702073282560_n.jpg?_nc_cat=103&ccb=1-3&_nc_sid=7206a8&_nc_ohc=iDOnhi5K14oAX-BCIyK&_nc_ht=scontent.fsgn5-7.fna&oh=4afae062a43dcc5f651ca39c6d4fd5b3&oe=613163EE" alt="">
-                    <span>Thach Thong</span>
-                    <div class="active"></div>
-                </a>
-            </div>
-            <div class="panel-item">
-                <a href="#">
-                    <img src="https://scontent.fsgn5-7.fna.fbcdn.net/v/t1.6435-1/cp0/p56x56/61750454_301360494135458_489822702073282560_n.jpg?_nc_cat=103&ccb=1-3&_nc_sid=7206a8&_nc_ohc=iDOnhi5K14oAX-BCIyK&_nc_ht=scontent.fsgn5-7.fna&oh=4afae062a43dcc5f651ca39c6d4fd5b3&oe=613163EE" alt="">
-                    <span>Thach Thong</span>
-                    <div class="active"></div>
-                </a>
-            </div> 
-            <div class="panel-item">
-                <a href="#">
-                    <img src="https://scontent.fsgn5-7.fna.fbcdn.net/v/t1.6435-1/cp0/p56x56/61750454_301360494135458_489822702073282560_n.jpg?_nc_cat=103&ccb=1-3&_nc_sid=7206a8&_nc_ohc=iDOnhi5K14oAX-BCIyK&_nc_ht=scontent.fsgn5-7.fna&oh=4afae062a43dcc5f651ca39c6d4fd5b3&oe=613163EE" alt="">
-                    <span>Thach Thong</span>
-                    <div class="active"></div>
-                </a>
-            </div> 
-            <div class="panel-item">
-                <a href="#">
-                    <img src="https://scontent.fsgn5-7.fna.fbcdn.net/v/t1.6435-1/cp0/p56x56/61750454_301360494135458_489822702073282560_n.jpg?_nc_cat=103&ccb=1-3&_nc_sid=7206a8&_nc_ohc=iDOnhi5K14oAX-BCIyK&_nc_ht=scontent.fsgn5-7.fna&oh=4afae062a43dcc5f651ca39c6d4fd5b3&oe=613163EE" alt="">
-                    <span>Thach Thong</span>
-                    <div class="active"></div>
+                <a 
+                    href="#" 
+                    v-for="friend in getAllFriends"
+                    :key="friend.id"
+                >
+                    <img :src="friend.avatar" alt="">
+                    <span>{{ friend.name }}</span>
+                    <div v-if="friend.isActive" class="active"></div> 
                 </a>
             </div>  
-            <div class="panel-item">
-                <a href="#">
-                    <img src="https://scontent.fsgn5-7.fna.fbcdn.net/v/t1.6435-1/cp0/p56x56/61750454_301360494135458_489822702073282560_n.jpg?_nc_cat=103&ccb=1-3&_nc_sid=7206a8&_nc_ohc=iDOnhi5K14oAX-BCIyK&_nc_ht=scontent.fsgn5-7.fna&oh=4afae062a43dcc5f651ca39c6d4fd5b3&oe=613163EE" alt="">
-                    <span>Thach Thong</span>
-                    <div class="active"></div>
-                </a>
-            </div> 
-            <div class="panel-item">
-                <a href="#">
-                    <img src="https://scontent.fsgn5-7.fna.fbcdn.net/v/t1.6435-1/cp0/p56x56/61750454_301360494135458_489822702073282560_n.jpg?_nc_cat=103&ccb=1-3&_nc_sid=7206a8&_nc_ohc=iDOnhi5K14oAX-BCIyK&_nc_ht=scontent.fsgn5-7.fna&oh=4afae062a43dcc5f651ca39c6d4fd5b3&oe=613163EE" alt="">
-                    <span>Thach Thong</span>
-                    <div class="active"></div>
-                </a>
-            </div> 
         </div>
     </div>
 </template>
 
 <script>
+
+import { mapGetters } from 'vuex'
 export default {
-    
+    data() {
+        return {
+
+        }
+    },
+    computed: {
+        ...mapGetters([
+            'getAllFriends'
+        ])
+    }
 }
 </script>
 
